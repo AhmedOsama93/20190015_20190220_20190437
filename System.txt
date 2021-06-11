@@ -1,0 +1,54 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class system {
+	private static Playground playgrounds[];
+	public static int cntPlaygrounds;
+	public static int cntUsers;
+	//private User users[];
+	public static boolean checkPlayground(Playground pg)
+	{
+		for (int i = 0; i < cntPlaygrounds; i++) {
+			if (pg.getOwner() == playgrounds[i].getOwner() 
+				&& pg.getName() == playgrounds[i].getName() 
+				&& pg.getLocation() == playgrounds[i].getLocation())
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	/*
+	public static boolean checkUser(User u)
+	{
+		for (int i = 0; i < cntUsers; i++) {
+			if (u.getEmail == users[i].getEmail() 
+				|| u.getID() == users[i].getID() )
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	*/
+	public static Playground[] getPlaygrounds() {
+		return playgrounds;
+	}
+	public void addPlayground(Playground pg)
+	{
+		cntPlaygrounds++;
+		ArrayList<Playground> arr = new ArrayList<Playground>(Arrays.asList(playgrounds));
+		arr.add(pg);
+		playgrounds = arr.toArray(playgrounds);
+	}
+	/*
+	public void addUser(User u)
+	{
+		cntUsers++;
+		ArrayList<User> arr = new ArrayList<User>(Arrays.asList(users));
+		arr.add(u);
+		users = arr.toArray(users);
+	}
+	*/
+}
