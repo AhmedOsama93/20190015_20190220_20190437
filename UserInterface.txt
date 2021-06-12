@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class UserInterface {
+	public void signup() {
+		Scanner input = new Scanner(System.in);
+        
+        String email,n,pass,id,phone,loc;
+        
+        int role;
+        
+        System.out.print("Email: ");   
+        
+        email= input.nextLine();
+        
+        System.out.print("Password: ");   
+        
+        pass= input.nextLine();
+        
+        System.out.print("ID: ");   
+        
+        id= input.nextLine();
+        
+        System.out.print("Location: ");   
+        
+        loc= input.nextLine();
+        
+        System.out.print("Phone: ");   
+        
+        phone = input.nextLine();
+        
+        System.out.print("Name: ");   
+        
+        n= input.nextLine(); 
+        
+        System.out.print("Enter (1) If you are a player  (2) If you are a playground owner: ");   
+        
+        role = input.nextInt();
+        
+        User u= new User();
+        
+        u.setID(id);
+        
+        u.setEmail(email);
+        
+        u.setPassword(pass);
+        
+        u.setLocation(loc);
+        
+        u.setPhone(phone);
+        
+        u.setRole(role);
+        
+        u.setName(n);
+        
+        if(system.checkUser(u) == true) {
+        	System.out.println("This user is already registered in our system. You can login");
+        }
+        else {
+        	system.addUser(u);
+        	
+        	System.out.println("Reigstration is successful");
+        }
+	}
+}

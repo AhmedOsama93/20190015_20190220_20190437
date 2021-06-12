@@ -1,0 +1,72 @@
+
+public class User {
+	    private String email;
+	   
+	    private String password;
+	   
+	    private String ID;
+	   
+	    private String phone;
+	   
+	    private String location;
+	   
+	    private String name;
+	   
+	    private int role;
+	   
+	    public void setEmail(String e){
+	        this.email = e;
+	    }
+	   
+	    public void setPassword(String pw){
+	        this.password =pw;
+	    }
+	   
+	    public void setID(String id){
+	        this.ID = id;
+	    }
+	   
+	    public void setPhone(String ph){
+	        this.phone = ph;
+	    }
+	   
+	    public void setLocation(String loc){
+	        this.location = loc;
+	    }
+	   
+	    public void setName(String n){
+	        this.name = n;
+	    }
+	   
+	    public void setRole(int r){
+	        this.role = r;
+	    }
+	   
+	    public String getEmail(){
+	        return email ;
+	    }
+	   
+	    public String getPassword(){
+	        return password ;
+	    }
+	   
+	    public String getID(){
+	        return ID ;
+	    }
+	   
+	    public String getPhone(){
+	        return phone ;
+	    }
+	   
+	    public String getLocation(){
+	            return location ;
+	    }
+	   
+	    public String getName(){
+	            return name ;
+	    }
+	   
+	    public int getRole(){
+	            return role ;
+	    }
+}
